@@ -1,0 +1,66 @@
+html {
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    text-shadow: 0 0 1px #fff;
+}
+
+h2 {
+    font-family: 'Audiowide', cursive;
+    font-size: 2em;
+    margin: 0.5rem;
+}
+
+h3 {
+    font-family: 'Assistant', cursive;
+    font-size: 1.5em;
+    margin: 0.5rem;
+}
+
+h3 a {
+    color: #55f;
+    transition: all 0.5s ease-in-out;
+}
+
+h3 a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+#top {
+    font-family: 'Audiowide', cursive;
+    font-size: 1.5em;
+}
+
+#clickme {
+    width: 10rem;   
+    height: 10rem;
+    margin: 0 auto;
+    transition: transform 0.1s ease-in-out;
+}
+
+#clickme:hover {
+    cursor: pointer;
+}
+
+#clickme:active {
+    transform: scale(0.9);
+}
+
+#scoreNum {
+    font-size: 2em;
+    font-family: 'Inter', sans-serif;
+    margin: 0.5rem;
+}
+
+.shopItem p {
+    font-size: 1.5em;
+    font-family: 'Inter', sans-serif;
+    margin: 0.5rem;
+}
+
+#nyanCost {
+    font-size: 1.3em;
+    margin: 0.5;
+}
