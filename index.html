@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>fun game // kool kookie klicker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/nyan.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant">
@@ -32,7 +32,7 @@
     <meta name="twitter:image" content="https://cookies.mbfr.app/img/og.png">
     <meta name="twitter:image:src" content="https://cookies.mbfr.app/img/og.png">
     <meta name="twitter:image:alt" content="nyan cat">
-    <meta name="twitter:domain" content="mbfrias.co.uk">
+    <meta name="twitter:domain" content="cookies.mbfr.app">
     <meta name="twitter:label1" content="made by">
     <meta name="twitter:data1" content="mbfrias">
     <meta name="twitter:label2" content="written in">
@@ -61,23 +61,69 @@
             <br>
             made by <a href="https://mbfrias.co.uk">mbfrias</a>
         </h3>
-        <!-- <div id="shop">
+        <div id="shopdiv">
             <h2>shop</h2>
-            <div id="shopItems">
-                <div class="shopItem">
-                    <p>nyan cat</p>
-                    <p id="nyanCost">100</p>
-                    <button id="nyanBtn" onclick="play()">buy</button>
-                </div>
-                <div class="shopItem">
-                    <p>nyan cat</p>
-                    <p id="nyanCost">100</p>
-                    <button id="nyanBtn" onclick="play()">buy</button>
+            <div id="shops">
+                <div id="cookieShop">
+                    <div class="cookieShopItem">
+                        <div class="itemImage">
+                            <img src="./img/cookie.png" alt="cookie clipart">
+                        </div>
+                        <div class="itemDetails">
+                            <h4>cookie clipart</h4>
+                            <p>reallly lame wouldnt reccomend</p>
+                            <div class="purchaseArea" id="useCookieClipart">
+                                <p class="price"><strong>Price:</strong> zero score</p>
+                                <p style="display: none;" class="priceNum">100</p>
+                                <button class="cookieBuyer activeCookie">use</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cookieShopItem">
+                        <div class="itemImage">
+                            <img src="./img/rich tea.png" alt="rich tea">
+                        </div>
+                        <div class="itemDetails">
+                            <h4>rich tea biscuit</h4>
+                            <p>good for tea</p>
+                            <div class="purchaseArea" id="buyRichTea">
+                                <p class="price"><strong>Price:</strong> one hundred score</p>
+                                <p style="display: none;" class="priceNum">100</p>
+                                <button class="cookieBuyer unavailable">use</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cookieShopItem">
+                        <div class="itemImage">
+                            <img src="./img/choc digestive.png" alt="choc digestive">
+                        </div>
+                        <div class="itemDetails">
+                            <h4>chocolate digestive</h4>
+                            <p>undeniably iconic</p>
+                            <div class="purchaseArea" id="buyRichTea">
+                                <p class="price"><strong>Price:</strong> two hundred score</p>
+                                <p style="display: none;" class="priceNum">200</p>
+                                <button class="cookieBuyer unavailable">use</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cookieShopItem">
+                        <div class="itemImage">
+                            <img src="./img/malted milk.png" alt="malted milk">
+                        </div>
+                        <div class="itemDetails">
+                            <h4>malted milk</h4>
+                            <p>epitome of biscuits</p>
+                            <div class="purchaseArea" id="buyRichTea">
+                                <p class="price"><strong>Price:</strong> five hundred score</p>
+                                <p style="display: none;" class="priceNum">800</p>
+                                <button class="cookieBuyer unavailable">use</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div> -->
-
-        <!-- coming soon -->
+        </div>
     </div>
 </body>
 </html>
