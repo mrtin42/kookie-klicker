@@ -3,16 +3,44 @@
 // path: js/index.js
 // ----------------------------------
 
+// ----------------------------------
+    // use cookie button functionality
+    function useCookie(cookiename, cookieDiv) {
+        if (document.getElementById(cookieDiv).classList.contains("unavailable")) {
+            window.alert("not enough score bro");
+        } else {
+            document.getElementById('clickme').attributes[0].value = `./img/${cookiename}.png`;
+            document.getElementsByClassName('activeCookie')[0].classList.remove("activeCookie");
+            document.getElementById(cookieDiv).classList.add("activeCookie");   
+        }
+    }
+// ----------------------------------
+
 window.onload = function() {
-    // restore score from cookie
+    // ----------------------------------
+    // restore score from cookie and unhide unavailable items
+    score = 0;
     cookie = document.cookie;
     if (cookie != "") {
         score = cookie.split("=")[1];
         document.getElementById("scoreNum").innerHTML = score;
+        var costs = document.getElementsByClassName('priceNum');
+        for (const x of costs) {
+            if (score >= x.innerHTML) {
+                x.parentElement.classList.remove("unavailable");
+            }
+        }
     } else {
         score = 0;
         document.getElementById("scoreNum").innerHTML = score;
     }
+    // cookie = document.cookie;
+    // if (cookie != "") {
+    //     score = cookie.split("=")[1];
+    // } else {
+    //     score = 0;
+    //     document.getElementById("scoreNum").innerHTML = score;
+    // }
 
     // ----------------------------------
     // scoring
@@ -30,15 +58,14 @@ window.onload = function() {
         // ----------------------------------
 
         // ----------------------------------
-        // shop eligibilty checker
-        prices = document.getElementsByClassName('purchaseArea')
-        for (const i of prices) {
-            if (score >= i.getElementsByClassName('priceNum').innerHTML) {
-                for (const x of i.getElementsByClassName('cookieBuyer')) {
-                    x.classList.remove('unavailable')
-                }
+        // remove 'unavailable' class from shop items when score is equal to or greater than the cost
+        prices = document.getElementsByClassName('priceNum');
+        for (const price of prices) {
+            if (score >= price.innerHTML) {
+                price.parentElement.classList.remove("unavailable");
             }
         }
+        // ----------------------------------
     }
-
+    // ----------------------------------
 }
