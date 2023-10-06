@@ -1,11 +1,15 @@
 // ----------------------------------
 // cookies.mbfr.app
 // path: js/index.js
+// smooth operator.... smoooooooth operatorrrrr
 // ----------------------------------
 
+
 // ----------------------------------
-    // use cookie button functionality
+// use cookie button functionality
     function useCookie(cookiename, cookieDiv) {
+        // ----------------------------------
+        // set cookie image to the selected cookie
         if (document.getElementById(cookieDiv).classList.contains("unavailable")) {
             window.alert("not enough score bro");
         } else {
@@ -13,6 +17,7 @@
             document.getElementsByClassName('activeCookie')[0].classList.remove("activeCookie");
             document.getElementById(cookieDiv).classList.add("activeCookie");   
         }
+        // ----------------------------------
     }
 // ----------------------------------
 
@@ -24,23 +29,11 @@ window.onload = function() {
     if (cookie != "") {
         score = cookie.split("=")[1];
         document.getElementById("scoreNum").innerHTML = score;
-        var costs = document.getElementsByClassName('priceNum');
-        for (const x of costs) {
-            if (score >= x.innerHTML) {
-                x.parentElement.classList.remove("unavailable");
-            }
-        }
     } else {
         score = 0;
         document.getElementById("scoreNum").innerHTML = score;
     }
-    // cookie = document.cookie;
-    // if (cookie != "") {
-    //     score = cookie.split("=")[1];
-    // } else {
-    //     score = 0;
-    //     document.getElementById("scoreNum").innerHTML = score;
-    // }
+    // ----------------------------------
 
     // ----------------------------------
     // scoring

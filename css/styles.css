@@ -70,10 +70,11 @@ h3 a:hover {
 
 #cookieShop {
     display: flex;
+    justify-content: center;
 }
 
 .cookieShopItem {
-    width: 25%
+    width: 18%;
 }
 
 .itemImage img {
