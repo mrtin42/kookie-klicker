@@ -29,9 +29,16 @@ window.onload = function() {
     if (cookie != "") {
         score = cookie.split("=")[1];
         document.getElementById("scoreNum").innerHTML = score;
+        prices = document.getElementsByClassName('priceNum');
+        for (const price of prices) {
+            if (score >= price.innerHTML) {
+                price.parentElement.classList.remove("unavailable");
+            }
+        }
     } else {
         score = 0;
         document.getElementById("scoreNum").innerHTML = score;
+        
     }
     // ----------------------------------
 
