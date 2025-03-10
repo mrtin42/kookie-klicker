@@ -49,8 +49,19 @@ window.onload = function() {
 
     cookie.onclick = function() {
         // ----------------------------------
-        // basic counting
-        score++;
+        // get active cookie
+        activeCookie = document.getElementsByClassName('activeCookie')[0];
+        // ----------------------------------
+        // ----------------------------------
+        if (activeCookie.id == "useCookieClipart") {
+            score++;
+        } else if (activeCookie.id == "buyRichTea" || activeCookie.id == "buyChocDigestive") {
+            score += 2;
+        } else if (activeCookie.id == "buyMaltedMilk") {
+            score += 5;
+        } else if (activeCookie.id == "buyChocnob") {
+            score += 10;
+        }
         document.getElementById("scoreNum").innerHTML = score;
         const d = new Date();
         d.setTime(d.getTime() + (1 * 24 * 60 * 60 * 1000));
